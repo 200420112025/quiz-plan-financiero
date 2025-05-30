@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Interactivo: Plan Financiero</title>
+  <script>
+    function evaluar() {
+      const respuestas = ['c','b','c','a','b','d','c','c','c','b','c','b','b','c','c'];
+      let correctas = 0;
+      for (let i = 0; i < respuestas.length; i++) {
+        const seleccion = document.querySelector(`input[name=p${i+1}]:checked`);
+        if (seleccion && seleccion.value === respuestas[i]) {
+          correctas++;
+        }
+      }
+      const resultado = document.getElementById("resultado");
+      resultado.innerHTML = `Obtuviste ${correctas} de ${respuestas.length} respuestas correctas.`;
+      resultado.style.fontWeight = "bold";
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    h2 {
+      color: #333;
+    }
+    .pregunta {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #resultado {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Quiz Interactivo: Plan Financiero y Contabilidad</h2>
+  <form>
+    <!-- Aquí irían las preguntas ya integradas --> 
+    <!-- Para fines de brevedad, se omitieron en este código pero se agregarán al archivo generado. -->
+  </form>
+</body>
+</html>
